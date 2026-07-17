@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>BioTree - 3D Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌳 BioTree 3D Prototype</h1>
+        <p>ต้นไม้อัจฉริยะ - ฟอกอากาศด้วยพลังงานแสงอาทิตย์</p>
+    </header>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>เกี่ยวกับ BioTree</h2>
+            <p>BioTree เป็นอุปกรณ์ฟอกอากาศอัจฉริยะที่ออกแบบมาเพื่อดูแลคุณภาพอากาศในบ้าน โดยใช้เทคโนโลยี 3D Visualization เพื่อแสดงสถานะของอุปกรณ์และคุณภาพอากาศในเวลาจริง</p>
+            <p>ด้านล่างคุณสามารถดูแบบจำลอง 3D ของต้นไม้และโต้ตอบกับมันได้โดยการเลื่อนและหมุน</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>⚡ แผงโซลาร์เซลล์</h3>
+                <p>สร้างพลังงานจากแสงอาทิตย์เพื่อให้อุปกรณ์ทำงาน</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌬️ ระบบฟอก</h3>
+                <p>ไส้กรอง HEPA และคาร์บอนเพื่อฟอกอากาศอย่างมีประสิทธิภาพ</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 หน้าจอแสดงผล</h3>
+                <p>แสดงค่า PM2.5 และสถานะคุณภาพอากาศในเวลาจริง</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎯 ตัวอย่าง 3D Model</h2>
+            
+            <div class="canvas-container">
+                <!-- Three.js will render here -->
+            </div>
+
+            <div class="controls-info">
+                <h3>วิธีโต้ตอบกับโมเดล:</h3>
+                <ul>
+                    <li>บนคอมพิวเตอร์: ใช้เมาส์เพื่อหมุน, scroll เพื่อขยาย/ย่อ</li>
+                    <li>บน iPad/Mobile: ใช้นิ้วเพื่อหมุน, pinch เพื่อขยาย/ย่อ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="code-section">
+            <h2>💻 เทคโนโลยีที่ใช้</h2>
+            <p>โปรเจกต์นี้ใช้ Three.js library เพื่อสร้างและแสดงผล 3D graphics:</p>
+            
+            <div class="code-block"><code>// ไลบรารี่ที่ใช้:
+• Three.js - WebGL library สำหรับ 3D graphics
+• OrbitControls - ควบคุมการหมุนและการมองดูด้วยเมาส์และการทัช
+
+// คุณสมบัติหลัก:
+✓ Smooth animations
+✓ Interactive 3D visualization
+✓ Touch support สำหรับ iPad
+✓ Responsive design
+✓ Particle effects (oxygen simulation)
+✓ Real-time rendering</code></div>
+
+            <h3>ส่วนประกอบหลักของโมเดล:</h3>
+            <div class="code-block"><code>1. ฐาน (Base) - ภาชนะโปร่งใส 45x45 cm
+   ├── ไส้กรอง HEPA (wireframe สีเทา)
+   ├── ไส้กรอง Carbon (สีเทาเข้ม)
+   └── แบตเตอรี่ (สีเทา)
+
+2. ลำต้น (Stem) - ท่อไม้ยาว 4 เมตร
+   └── หน้าจอแสดงผล PM2.5 (สีดำ/เขียว)
+
+3. พุ่มใบไม้ (Foliage) - ทรง Dodecahedron
+   ├── ใบไม้ 5 ชิ้น (สีเขียว)
+   └── แผงโซลาร์เซลล์ (สีน้ำเงิน)
+
+4. อนุภาค (Particles) - ออกซิเจนลอยฟุ้ง
+   └── 150 ละอองแสดงการไหลของอากาศสะอาด</code></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BioTree 3D Prototype | ออกแบบและพัฒนาโดย Delph9491</p>
+    </footer>
+
+    <!-- Three.js Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
